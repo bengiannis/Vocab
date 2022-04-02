@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 Button StartButton;
+    private WordOfTheDay wordOfTheDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +24,9 @@ Button StartButton;
                 startActivity(i);
             }
         });
+
+        this.wordOfTheDay = new WordOfTheDay();
+        ((TextView)findViewById(R.id.word)).setText(this.wordOfTheDay.getWord());
+        ((TextView)findViewById(R.id.definition)).setText(this.wordOfTheDay.getDefinition());
     }
 }

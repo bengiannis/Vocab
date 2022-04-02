@@ -46,6 +46,10 @@ public class Dictionary {
         }
     }
 
+    static String[] allCategories() {
+        return new String[]{"Sports", "Transportation", "Summer", "Winter", "School", "School Supplies", "Holidays"};
+    }
+
     public String definitionOf(String word) {
         for (int i = 0; i < this.words.length; i++) {
             if (this.words[i].equals(word)) {
@@ -58,5 +62,9 @@ public class Dictionary {
     public String[] autocorrectWords(String word) {
         Autocorrect autocorrect = new Autocorrect(this.words);
         return autocorrect.autocorrectWords(word);
+    }
+
+    public String[] getWords() {
+        return words;
     }
 }

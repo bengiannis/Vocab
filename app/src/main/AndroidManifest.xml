@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocab">
         <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondScreen"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
