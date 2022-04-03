@@ -29,7 +29,7 @@ public class SecondScreen extends AppCompatActivity {
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent k =  new Intent(SecondScreen.this,SearchActivity2.class);
+                Intent k =  new Intent(SecondScreen.this,SearchActivity.class);
                 startActivity(k);
             }
         });
@@ -37,7 +37,7 @@ public class SecondScreen extends AppCompatActivity {
         imageButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent l = new Intent(SecondScreen.this, SearchActivity3.class);
+                Intent l = new Intent(SecondScreen.this, SearchActivity.class);
                 startActivity(l);
             }
         });
@@ -45,7 +45,7 @@ public class SecondScreen extends AppCompatActivity {
         imageButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent h = new Intent(SecondScreen.this,SearchActivity4.class);
+                Intent h = new Intent(SecondScreen.this,SearchActivity.class);
                 startActivity(h);
             }
         });

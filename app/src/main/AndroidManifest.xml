@@ -10,15 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vocab">
         <activity
-            android:name=".SearchActivity4"
-            android:exported="false" />
-        <activity
-            android:name=".SearchActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".SearchActivity2"
-            android:exported="false" />
-        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity
