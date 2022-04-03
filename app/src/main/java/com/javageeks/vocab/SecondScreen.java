@@ -22,6 +22,7 @@ public class SecondScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent j =  new Intent(SecondScreen.this,SearchActivity.class);
+                j.putExtra("category", "Sports");
                 startActivity(j);
             }
         });
@@ -30,6 +31,7 @@ public class SecondScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent k =  new Intent(SecondScreen.this,SearchActivity.class);
+                k.putExtra("category", "Transportation");
                 startActivity(k);
             }
         });
@@ -38,6 +40,7 @@ public class SecondScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent l = new Intent(SecondScreen.this, SearchActivity.class);
+                l.putExtra("category", "Summer");
                 startActivity(l);
             }
         });
@@ -46,6 +49,7 @@ public class SecondScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent h = new Intent(SecondScreen.this,SearchActivity.class);
+                h.putExtra("category", "School Supplies");
                 startActivity(h);
             }
         });

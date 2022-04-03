@@ -60,7 +60,7 @@ public class Autocorrect {
 
     public boolean contains(String word) {
         for (String wordWithDefinition : this.words) {
-            if (wordWithDefinition.equals(word)) {
+            if (wordWithDefinition.equalsIgnoreCase(word)) {
                 return true;
             }
         }
