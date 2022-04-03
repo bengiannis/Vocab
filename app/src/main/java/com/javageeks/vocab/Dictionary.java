@@ -2,7 +2,7 @@ package com.javageeks.vocab;
 
 public class Dictionary {
     private final String category;
-    private final String[] words;
+    public  final String[] words;
     private final String[] definitions;
 
     public Dictionary(String category) {

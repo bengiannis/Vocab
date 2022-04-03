@@ -26,6 +26,7 @@ public class SecondScreen extends AppCompatActivity {
                 startActivity(j);
             }
         });
+        this.setTitle("Category List");
         imageButton2 = (ImageButton) findViewById(R.id.imageButton2);
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override

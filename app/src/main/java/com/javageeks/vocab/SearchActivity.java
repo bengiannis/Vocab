@@ -5,17 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
 import java.io.Serializable;
+import java.util.Collections;
 
 public class SearchActivity extends AppCompatActivity implements Serializable {
     private Dictionary dictionary;
     private Autocorrect autocorrect;
+
+    ListView listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,7 @@ public class SearchActivity extends AppCompatActivity implements Serializable {
         setContentView(R.layout.activity_search);
 
         String category = getIntent().getStringExtra("category");
+        this.setTitle(category);
         this.dictionary = new Dictionary(category);
         this.autocorrect = new Autocorrect(this.dictionary.getWords());
 
@@ -43,5 +50,12 @@ public class SearchActivity extends AppCompatActivity implements Serializable {
                 }
             }
         });
+
+        listView = (ListView)findViewById(R.id.listView);
+        Dictionary list = new Dictionary(category);
+
+        ArrayAdapter<String> adapt = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,(list.words));
+        listView.setAdapter(adapt);
+
     }
 }
