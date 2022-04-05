@@ -33,6 +33,8 @@ public class SearchActivity extends AppCompatActivity implements Serializable {
         this.dictionary = new Dictionary(category);
         this.autocorrect = new Autocorrect(this.dictionary.getWords());
 
+        ((EditText)findViewById(R.id.wordSearchBox)).setHint("Word");
+        ((TextView)findViewById(R.id.didYouMean)).setText("");
 
         ((Button)findViewById(R.id.searchButton)).setOnClickListener(new View.OnClickListener() {
             @Override
