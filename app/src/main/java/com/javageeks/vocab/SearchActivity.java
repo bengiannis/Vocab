@@ -61,6 +61,7 @@ public class SearchActivity extends AppCompatActivity implements Serializable {
                 if (autocorrectResults.length > 0) {
                     wordSearchBox.setText(autocorrectResults[0]);
                     ((Button)findViewById(R.id.searchButton)).performClick();
+                    ((TextView)findViewById(R.id.didYouMean)).setText("");
                 }
             }
         });
