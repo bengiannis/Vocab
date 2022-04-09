@@ -53,6 +53,18 @@ public class SearchActivity extends AppCompatActivity implements Serializable {
             }
         });
 
+        ((Button)findViewById(R.id.didYouMean)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText wordSearchBox = ((EditText)findViewById(R.id.wordSearchBox));
+                String[] autocorrectResults = autocorrect.autocorrectWords(wordSearchBox.getText().toString());
+                if (autocorrectResults.length > 0) {
+                    wordSearchBox.setText(autocorrectResults[0]);
+                    ((Button)findViewById(R.id.searchButton)).performClick();
+                }
+            }
+        });
+
         listView = (ListView)findViewById(R.id.listView);
         Dictionary list = new Dictionary(category);
 
